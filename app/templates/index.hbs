@@ -1,0 +1,19 @@
+<div class="row container">
+  <div class="col-xs-8 col-xs-offset-2 jumbotron">
+    {{new-question save="save"}}
+  </div>
+  <hr>
+  <div>
+    <ul class="list-group">
+      {{#each model.questions as |question|}}
+      <li class="list-item-group" {{question-tile question=question}}>{{#link-to 'question' question.id}}<p>
+        {{question.content}}
+      </p>
+      <p>
+        {{question.author}}
+      </p>{{/link-to}}</li>
+      {{/each}}
+    </ul>
+
+  </div>
+</div>

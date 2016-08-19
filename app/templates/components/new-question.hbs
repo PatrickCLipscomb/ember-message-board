@@ -1,0 +1,19 @@
+{{#if showQuestionForm}}
+  <div class"form-group">
+    <div class="form-control">
+      <label for="content">For what do you require wisdom?</label>
+      {{input value=content id="content" placeholder="question goes here"}}
+    </div>
+    <div class="form-control">
+      <label for="author">Who are you?</label>
+      {{input value=author id="author" placeholder="your alias"}}
+    </div>
+    <div class="form-control">
+      <label for="notes">Is there any other information we should know?</label>
+      {{input value=notes id="notes" placeholder="details to paint the picture"}}
+    </div>
+    <button class="btn btn-info" {{action 'save'}}>Submit your query</button>
+  </div>
+{{else}}
+  <button class="btn btn-info btn-lg" action 'showQuestionForm'>QUESTION?</button>
+{{/if}}
