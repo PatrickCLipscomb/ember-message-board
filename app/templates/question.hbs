@@ -1,1 +1,28 @@
-{{outlet}}
+<div class="row container">
+  <div class="col-xs-8 col-xs-offset-2 jumbotron">
+    <h3>{{model.content}}</h3>
+    <p>
+      {{model.notes}}
+    </p>
+    <hr>
+    <p>
+      {{model.author}}
+    </p>
+    <hr>
+    {{new-answer question=model newAnswer="newAnswer"}}
+  </div>
+</div>
+<div>
+  <h2>Previous Answers:</h2>
+  <ul class="list-group">
+    {{#each model.answers as |answer|}}
+      <li class="list-item-group"><p>
+        {{answer.content}}
+      </p><p>
+        {{answer.author}}
+      </p><p>
+        {{answer.timestamp}}
+      </p></li>
+    {{/each}}
+  </ul>
+</div>

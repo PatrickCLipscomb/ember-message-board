@@ -1,0 +1,15 @@
+{{#if 'showAnswerForm'}}
+  <div class="form-group">
+    <div class="form-control">
+      <label for="content">Enter your Answer</label>
+      {{input value=content id="content"}}
+    </div>
+    <div class="form-control">
+      <label for="author">Enter your Alias</label>
+      {{input value=author id="author"}}
+    </div>
+    <button class="btn btn-sucess" {{action 'newAnswer'}}></button>
+  </div>
+{{else}}
+  <button class="btn btn-lg btn-success" {{action 'showAnswerFrom'}}>Drop some KNOWLEDGE</button>
+{{/if}}

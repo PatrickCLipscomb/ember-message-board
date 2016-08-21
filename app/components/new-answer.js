@@ -7,7 +7,7 @@ export default Ember.Component.extend({
       this.set('showAnswerForm', true);
     },
     newAnswer() {
-      var params: {
+      var params = {
         content: this.get('content'),
         author: this.get('author'),
         question: this.get('question'),
