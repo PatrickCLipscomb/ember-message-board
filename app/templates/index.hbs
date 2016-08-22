@@ -6,7 +6,7 @@
   <div>
     <ul class="list-group">
       {{#each model as |question|}}
-      <li class="list-item-group">{{#link-to 'question' question.id}}<p>
+      <li class="list-item-group">{{#link-to 'question' question}}<p>
         {{question.content}}
       </p>
       <p>
