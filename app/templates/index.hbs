@@ -2,8 +2,11 @@
   <div class="col-xs-8 col-xs-offset-2 jumbotron">
     {{new-question save="save"}}
   </div>
+  <div class="col-xs-2">
+
+  </div>
   <hr>
-  <div>
+  <div class="col-xs-8 col-xs-offset-2">
     <ul class="list-group">
       {{#each model as |question|}}
       <li class="list-item-group">{{#link-to 'question' question}}<p>
