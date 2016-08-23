@@ -13,14 +13,14 @@
   </div>
 </div>
 <div>
-  <h2>Previous Answers:</h2>
-  <ul class="list-group">
+  <h2 align="middle">Answers</h2>
+  <ul class="list-group center">
     {{#each model.answers as |answer|}}
-      <li class="list-item-group"><p>
+      <li class="list-item-group"><h4>
         {{answer.content}}
-      </p><p>
+      </h4><h5>
         {{answer.author}}
-      </p><p>
+      </h5><p>
         {{answer.timestamp}}
       </p></li>
     {{/each}}
