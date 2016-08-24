@@ -9,12 +9,15 @@
     <hr>
     <ul class="list-group">
       {{#each model as |question|}}
-      <li class="list-item-group">{{#link-to 'question' question}}<p>
+      {{#link-to 'question' question}}
+      <li class="list-item-group"><h3>Question: </h3><p>
         {{question.content}}
       </p>
+      <h4>Author: </h4>
       <p>
         {{question.author}}
-      </p>{{/link-to}}</li>
+      </p></li>
+      {{/link-to}}
       {{/each}}
     </ul>
 

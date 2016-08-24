@@ -2,7 +2,7 @@
   <div class="col-xs-8 col-xs-offset-2 jumbotron">
     <h3>{{model.content}}</h3>
     <p>
-      {{model.notes}}
+      Notes: {{model.notes}}
     </p>
     <hr>
     <p>
@@ -11,18 +11,17 @@
     <hr>
     {{new-answer question=model newAnswer="newAnswer"}}
   </div>
-</div>
-<div>
-  <h2 align="middle">Answers</h2>
-  <ul class="list-group center">
+  <div class="col-xs-8 col-xs-offset-2">
+    <h2>Answers</h2>
     {{#each model.answers as |answer|}}
-      <li class="list-item-group"><h4>
+      <h4>
         {{answer.content}}
       </h4><h5>
         {{answer.author}}
       </h5><p>
         {{answer.timestamp}}
-      </p></li>
+      </p>
+      <hr>
     {{/each}}
-  </ul>
+  </div>
 </div>
